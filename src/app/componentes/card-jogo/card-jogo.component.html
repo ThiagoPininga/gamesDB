@@ -1,1 +1,9 @@
-<p>{{jogo.name}}</p>
+<section [routerLink]="[jogo.slug]">
+    <img [src]="jogo.img" alt="">
+    <div class="infos">
+        <p >{{jogo.nome}}</p>
+        <div class="rating">
+            {{jogo.rating}}
+        </div>
+    </div>
+</section>

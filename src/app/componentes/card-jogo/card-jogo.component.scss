@@ -1,0 +1,43 @@
+section{
+    background: #1B2420;
+    border-radius: 15px;
+
+    height: 35vh;
+    box-shadow: -1px 1px 3px black;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    img{
+        width: 100%;
+        object-fit:cover;
+        height: 50%;
+        border-radius: 15px 15px 0 0;
+    }
+
+    div, p{
+        background: none;
+        font-size: 1.2rem;
+    }
+
+    .infos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 50%;
+        padding: 10%;
+    }
+
+    .rating{
+        margin: 2%;
+        margin-left: 10%;
+        padding: 5%;     
+
+        background-color: #547968;
+
+        border-radius: 20px;
+    }
+}
+
