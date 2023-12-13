@@ -5,6 +5,8 @@ import { JogoDetalhesComponent } from './componentes/jogo-detalhes/jogo-detalhes
 
 export const routes: Routes = [
     {path: '' , component: ListagemJogosComponent},
-    {path: 'pesquisa', component: PesquisaComponent},
+    {path: 'pesquisa/:pesquisa', component: PesquisaComponent},
+    {path: 'pesquisa/:pesquisa/:nome', component: JogoDetalhesComponent},
     {path: ':nome', component: JogoDetalhesComponent}
+    
 ]

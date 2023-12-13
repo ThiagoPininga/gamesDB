@@ -9,6 +9,12 @@ import { RawApiService } from '../../services/raw-api.service';
 })
 export class JogoDetalhesComponent {
   jogo: any;
+  plataformas: any = {
+    pc: '../../assets/windows.svg',
+    xbox: '../../assets/xbox.svg',
+    playstation: '../../assets/playstation.svg',
+    nintendo: '../../assets/nintendo.svg'
+  };
 
   constructor(private route: ActivatedRoute, private api: RawApiService){}
 
@@ -18,11 +24,15 @@ export class JogoDetalhesComponent {
 
       this.api.getGameEspecifico(this.jogo).subscribe((data) => {
         this.jogo = data
-        console.log(this.jogo)
+        console.log(this.jogo)    
+
         this.jogo.nome = this.jogo.name 
         this.jogo.img = this.jogo.background_image
+        this.jogo.plataformas = this.jogo.parent_platforms
         this.jogo.descricao = this.jogo.description
-        console.log(this.jogo.descricao)
+        this.jogo.rating = this.jogo.metacritic
+        
+        console.log(this.jogo.plataformas)
       })
     })
   }

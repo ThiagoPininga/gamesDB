@@ -1,8 +1,9 @@
 <header>
     <a routerLink="">
-        <img src="../../../assets/G.png" alt="">
+      <img src="../../../assets/G.png" alt="">
     </a>
-    <form (ngSubmit)="pesquisar()">
-        <input type="text">
-    </form>    
+    <form>
+      <input type="text" [(ngModel)]="pesquisa" name="pesquisa" id="pesquisa" placeholder="Digite sua pesquisa" (input)="pesquisar()">
+    </form>
 </header>
+  

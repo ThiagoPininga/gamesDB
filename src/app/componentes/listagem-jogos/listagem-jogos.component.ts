@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RawApiService } from '../../services/raw-api.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { RawApiService } from '../../services/raw-api.service';
 })
 export class ListagemJogosComponent {
   jogos: any;
-
+  
   constructor(private api: RawApiService){}
 
   ngOnInit() {

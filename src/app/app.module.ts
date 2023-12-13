@@ -8,9 +8,10 @@ import { ListagemJogosComponent } from './componentes/listagem-jogos/listagem-jo
 import { CardJogoComponent } from './componentes/card-jogo/card-jogo.component';
 import { JogoDetalhesComponent } from './componentes/jogo-detalhes/jogo-detalhes.component';
 import { PesquisaComponent } from './componentes/pesquisa/pesquisa.component';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
+    FormsModule,
     AppRoutingModule
   ],
   providers: [

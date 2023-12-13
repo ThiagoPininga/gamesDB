@@ -1,13 +1,18 @@
 <main>
     <section>
-        <h4>{{jogo.nome}}</h4>
+        <h1>{{jogo.nome}}</h1>
         <div class="centro">
             <img [src]="jogo.img" alt="">
             <div>
+                <h3>Plataforms:</h3>
+                <p *ngFor="let plataforma of jogo.plataformas" >{{plataforma.platform.name}}</p>
 
+                <div class="rating">
+                    {{jogo.rating}}
+                </div>
             </div>
         </div>
 
-        <p>{{jogo.descricao}}</p>
+        <div class="descricao" [innerHTML]="jogo.descricao"></div>
     </section>
 </main>

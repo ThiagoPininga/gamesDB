@@ -4,12 +4,56 @@ main{
     section{
         background-color: #1B2420;
         border-radius: 20px;
+
+        padding: 2vw;
+
+        box-shadow: -2px 2px 5px black;
+
+        h1{
+            margin: 20px;
+        }
     }
 
+    .centro{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 2vw;
+
+        div{
+            width: 40%;  
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+            gap: 1rem;
+            
+            p, h3{
+                text-align: center;
+            }
+
+            .rating{
+                padding: 2vh;
+                width: 8vh;
+                background: #547968;
+
+                border-radius: 20px;
+
+                p{
+                    margin: 0px;
+                    padding: 0px;
+                }
+            }
+        }
+    }
     img{
         width: 60%;
         border-radius: 20px;
     }
     
-}
+    .descricao{
+        margin: 20px;
 
+    }
+}
