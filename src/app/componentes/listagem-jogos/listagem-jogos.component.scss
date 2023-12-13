@@ -5,3 +5,23 @@ main{
     column-gap: 5%;
     row-gap: 3vh;
 }
+div:last-child{
+    width: 100%;
+    margin: 7vh;
+    text-align: center;
+
+    span{
+        font-size: 1.2rem;
+    }
+
+    button{
+        margin: 0 30px;
+
+        background-color: #547968;
+        border: none;
+        padding: .4rem;
+        border-radius: 6px;
+
+        box-shadow: -1px 1px 2px black;
+    }
+}

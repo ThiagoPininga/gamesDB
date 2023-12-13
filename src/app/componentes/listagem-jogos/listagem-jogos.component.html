@@ -1,3 +1,8 @@
 <main>
     <app-card-jogo *ngFor="let jogo of jogos" [jogo]="jogo" />
 </main>
+<div>
+    <button (click)="navegarParaPagina(paginaAtual - 1)">Anterior</button>
+    <span>Página {{ paginaAtual }}</span>
+    <button (click)="navegarParaPagina(paginaAtual + 1)">Próxima</button>
+</div>

@@ -9,17 +9,30 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PesquisaComponent {
   jogos: any;
+  paginaAtual = 1
+
 
   constructor(private api: RawApiService,private route: ActivatedRoute){}
 
   ngOnInit() {
+    this.carregarJogos()
+  }
+
+  carregarJogos() {
     this.route.params.subscribe((param) => {
-      this.api.getPesquisaGames(param['pesquisa']).subscribe((data) => {
+      this.api.getPesquisaGames(param['pesquisa'], this.paginaAtual).subscribe((data) => {
         this.jogos = data
         this.jogos = this.jogos.results
+        
       })
-
-
     })
+  }
+
+  navegarParaPagina(pagina: number) {
+    if (pagina >= 1) {
+      this.paginaAtual = pagina;
+      console.log(this.paginaAtual)
+      this.carregarJogos();
+    }
   }
 }
